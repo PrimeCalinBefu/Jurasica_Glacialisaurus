@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glacialisaurus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h1>Glacialisaurus</h1>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="Glacialisaurus_1.png" alt="Glacialisaurus 1 Icon" >
+        <img src="Glacialisaurus_2.png" alt="Glacialisaurus 2 Icon" >
+        <img src="Glacialisaurus_3.png" alt="Glacialisaurus 3 Icon" >
+        <img src="Glacialisaurus_4.png" alt="Glacialisaurus 4 Icon" >
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text">Glacialisaurus, poreclit si “Șopârla înghețată”, a fost denumit de N. D. Smith și D. Pol și era predominat situata in Regiunea Hanson, Antarctica. Se știe ca avea o dietă ierbivoră, și ca a trăit in Sinemurianul din Jurassic, dar detalii legate de dimensiunile sale ramân necunoscute din pricina lipsei de rămășițe. Singurele rămășițe gasite sunt membrul posterior parțial incluzând femurul și piciorul.</p>
+
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text">Glacialisaurus, nicknamed the "Frozen Lizard," was named by N. D. Smith and D. Pol and was predominantly located in the Hanson Region of Antarctica. It is known to have had a herbivorous diet and lived during the Sinemurian stage of the Jurassic period. However, details regarding its size remain unknown due to the lack of remains. The only remains found are a partial hind limb, including the femur and foot.</p><br>
+</main>
+<footer>
+    <script>
+        const romanaAudio = new Audio('Glacialisaurus_ro.m4a');
+        const englezaAudio = new Audio('Glacialisaurus_en.wav');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
+
+//by Alexa Stefan George
